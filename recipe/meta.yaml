@@ -25,8 +25,9 @@ requirements:
     - slicerator >=0.9.4
     - six >=1.8
     - numpy >=1.7
-    - scikit-image  # one of { scikit-image | matplotlib | scipy }
-    - pillow  # optional, but necessary for ipython rich display
+# The following dependencies are optional
+#    - scikit-image  # one of { scikit-image | matplotlib | scipy }
+#    - pillow  # optional, but necessary for ipython rich display
 
 test:
   imports:
@@ -61,3 +62,5 @@ extra:
     - ericdill
     - licode
     - tacaswell
+    - caspervdw
+
