@@ -30,7 +30,6 @@ requirements:
     - pillow
 # The following dependencies are optional (for specific readers)
     - scipy  # one of { scikit-image | matplotlib | scipy }
-    - libtiff
     - tifffile
 
 test:
