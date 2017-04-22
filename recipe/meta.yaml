@@ -1,28 +1,31 @@
-{% set version = "0.3.3" %}
+{% set name = "pims" %}
+{% set version = "0.4" %}
+{% set sha256 = "d3269b157f678184bda1a4278f76db9b9e64e9b8d252201308dce7ae0d270789" %}
+
 package:
   name: pims
   version: {{ version }}
 
 source:
-  url: https://github.com/soft-matter/pims/archive/v{{ version }}.tar.gz
-  fn: pims-v{{ version }}.tar.gz
-  sha256: b764c53bfa43863f9909d7bed6fcc95008edc4e6eedb979d78a2702531282a46
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
   build:
     - python
     - setuptools
-    - slicerator >=0.9.4
+    - slicerator >=0.9.7
     - six >=1.8
     - numpy >=1.7
 
   run:
     - python
-    - slicerator >=0.9.4
+    - slicerator >=0.9.7
     - six >=1.8
     - numpy >=1.7
 # The following dependencies are only required for rich IPython display
@@ -42,7 +45,10 @@ test:
     - pims.display
     - pims.ffmpeg_reader
     - pims.frame
+    - pims.image_reader
     - pims.image_sequence
+    - pims.imageio_reader
+    - pims.moviepy_reader
     - pims.norpix_reader
     - pims.pyav_reader
     - pims.spe_stack
