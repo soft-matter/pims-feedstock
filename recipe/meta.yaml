@@ -1,15 +1,13 @@
-{% set name = "pims" %}
 {% set version = "0.4" %}
-{% set sha256 = "d3269b157f678184bda1a4278f76db9b9e64e9b8d252201308dce7ae0d270789" %}
 
 package:
   name: pims
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  fn: PIMS-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/p/pims/PIMS-{{ version }}.tar.gz
+  sha256: d3269b157f678184bda1a4278f76db9b9e64e9b8d252201308dce7ae0d270789
 
 build:
   number: 0
