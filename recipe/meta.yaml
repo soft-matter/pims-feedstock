@@ -1,5 +1,5 @@
 {% set name = "PIMS" %}
-{% set version = "0.4" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d3269b157f678184bda1a4278f76db9b9e64e9b8d252201308dce7ae0d270789
+  sha256: 6a53a155e900b44e71127a1e1fccbfbaed7eec3c2b52497c40c23a05f334c9dd
 
 build:
   number: 0
