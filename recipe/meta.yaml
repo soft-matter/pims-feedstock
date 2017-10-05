@@ -1,13 +1,14 @@
-{% set version = "0.4" %}
+{% set name = "PIMS" %}
+{% set version = "0.4.1" %}
 
 package:
-  name: pims
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: PIMS-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/p/pims/PIMS-{{ version }}.tar.gz
-  sha256: d3269b157f678184bda1a4278f76db9b9e64e9b8d252201308dce7ae0d270789
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 6a53a155e900b44e71127a1e1fccbfbaed7eec3c2b52497c40c23a05f334c9dd
 
 build:
   number: 0
@@ -17,9 +18,6 @@ requirements:
   build:
     - python
     - setuptools
-    - slicerator >=0.9.7
-    - six >=1.8
-    - numpy >=1.7
 
   run:
     - python
@@ -59,6 +57,7 @@ test:
 about:
   home: https://github.com/soft-matter/pims
   license: BSD 3-Clause
+  license_file: license.txt
   summary: >
       Python Image Sequence. Load video and sequential images in many formats 
       with a simple, consistent interface.
@@ -67,6 +66,7 @@ extra:
   recipe-maintainers:
     - danielballan
     - ericdill
+    - jakirkham
     - licode
     - tacaswell
     - caspervdw
