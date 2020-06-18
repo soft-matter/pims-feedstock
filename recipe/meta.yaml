@@ -57,7 +57,7 @@ test:
 
 about:
   home: https://github.com/soft-matter/pims
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: license.txt
   summary: >
       Python Image Sequence. Load video and sequential images in many formats 
