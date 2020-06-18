@@ -1,4 +1,4 @@
-{% set version = "0.3.3" %}
+{% set version = "0.5rc1" %}
 package:
   name: pims
   version: {{ version }}
@@ -6,7 +6,7 @@ package:
 source:
   url: https://github.com/soft-matter/pims/archive/v{{ version }}.tar.gz
   fn: pims-v{{ version }}.tar.gz
-  sha256: b764c53bfa43863f9909d7bed6fcc95008edc4e6eedb979d78a2702531282a46
+  sha256: 2aa2f6143878bdca555960ca673a2ff27014260aab97a93b3ac3cbda58ac702a
 
 build:
   number: 0
@@ -61,3 +61,4 @@ extra:
     - ericdill
     - licode
     - tacaswell
+    - nkeim
