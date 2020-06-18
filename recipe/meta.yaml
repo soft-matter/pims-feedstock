@@ -1,5 +1,5 @@
 {% set name = "PIMS" %}
-{% set version = "0.4.1" %}
+{% set version = "0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -8,10 +8,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6a53a155e900b44e71127a1e1fccbfbaed7eec3c2b52497c40c23a05f334c9dd
+  sha256: 2aa2f6143878bdca555960ca673a2ff27014260aab97a93b3ac3cbda58ac702a
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
@@ -71,3 +71,4 @@ extra:
     - licode
     - tacaswell
     - caspervdw
+    - nkeim
